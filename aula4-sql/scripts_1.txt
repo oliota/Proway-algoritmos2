@@ -1,0 +1,68 @@
+-- para selecionar linhas em uma tabela utilizar o comando SELECT
+--  depois nos nomes das colunas separados por VIRGULA, mas se quiser todos basta colocar *
+-- from + nome da tabela que é o alvo da busca
+
+select * from pessoas;
+
+
+select * from pessoas  
+where                      
+   idade <=18              
+
+
+-- para fazer buscas parciais por texto utilizo LIKE "%valor%"
+select * from pessoas
+where
+nome like "%Pessoa%" 
+
+--para fazer buscas que começam com TAL valor utilizo like "Valor%"
+select * from pessoas
+where
+nome like "P%"
+
+-- para fazer buscas que terminam com TAL valor utilizo like "%Valor"
+select * from pessoas
+where
+nome like "%o"
+
+-- trazer todas a pessoas que iniciam com P e tem idade <= 20
+select * from pessoas
+where
+    nome like "P%"
+    and idade <= 20
+
+
+select 
+    nome,
+    id,
+    idade 
+from pessoas
+where
+idade =10
+
+
+insert into pessoas (nome) values ("tester")
+  
+
+-- criar uma tabela chamada usuarios com os campos
+-- id integer primary key autoincrement unique
+-- nome text not null
+-- email text not null
+-- senha text not null
+-- obs text
+ 
+--para criar uma tabela utilize CREATE TABLE + nome da tabela
+--dentro dos () informar campo a campo com seus atributos
+--separar os campos por VIRGULA
+-- cada campo tem seu nome TIPO e configurações adicionais
+
+create table usuarios(
+    id integer primary key autoincrement unique,
+    nome text not null,
+    email text not null,
+    senha text not null,
+    obs text
+)
+
+
+
