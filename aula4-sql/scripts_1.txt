@@ -64,5 +64,51 @@ create table usuarios(
     obs text
 )
 
+-- inserir 4 usuarios na tabela
+--para exercitar campos obrigatorio e campos opcionais
+
+insert 
+ into usuarios (nome,email,senha,obs)
+ values ("Jose","j@gmail.com","Jose#123","minha senha é Jose#123")
+
+select * from usuarios
+
+insert into usuarios (nome,email,senha)
+values("Ricardo","ricardinhogameplay@gmail.com","minecraft321")
+
+
+select * from usuarios
+where
+id = 2
+
+update usuarios
+set 
+    nome  = "Ricardinho",
+    email = "Rick@gameplay.com",
+    obs   = "assim esta melhor"
+where
+id = 2
+
+
+select * from pessoas
+
+'
+
+-- JUNIOS atualizem as idades para 18 de quem termina com N na tabela de pessoas
+
+update pessoas
+set
+idade = 18
+--select * from pessoas
+where
+nome like "%n"
+
+ 
+
+
+
+
+
+
 
 
